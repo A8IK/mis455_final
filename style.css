@@ -86,7 +86,7 @@ body {
   }
 
   .right-panel {
-    background-color: #010505;
+    /* background-color: #010505; */
     overflow: hidden; 
     display: flex;
     flex-direction: column;
@@ -100,3 +100,52 @@ body {
     justify-content: center;
   }
   
+  .five-day-forecast-container {
+    max-height: 300px; 
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+    justify-content: center; 
+  }
+  
+  .five-day-forecast-heading {
+    font-size: 1.5rem;
+    font-weight: bold;
+    padding: 10px;
+  }
+  
+  .five-day-forecast-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); 
+    grid-gap: 10px; 
+    justify-content: center; 
+  }
+  
+  .weather-block {
+    padding: 10px;
+    border: 1px solid #fffefe;
+    border-radius: 5px;
+  }
+  
+  
+  .additional-weather {
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.2);
+    border-radius: 5px;
+    margin-top: 20px;
+  }
+  
+  
+  .interactive-forecast-item {
+    cursor: pointer;
+    padding: 10px;
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 5px;
+    margin-bottom: 10px;
+    transition: background-color 0.3s ease-in-out;
+  }
+  
+  .interactive-forecast-item:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+  }
