@@ -106,4 +106,28 @@ document.addEventListener("DOMContentLoaded", () => {
         }
     }
 
+    function getCurrentDate() {
+        const today = new Date();
+        return today.toDateString();
+    }
     
+    document.getElementById("searchBtn").addEventListener("click", async () => {
+        const location = locationInput.value;
+        const todayWeatherData = await getWeatherData(location);
+        const forecastWeatherData = await getForecastData(location);
+
+        if (todayWeatherData) {
+            updateTodayWeatherData(todayWeatherData);
+            updateAdditionalWeatherData(todayWeatherData);
+        }
+
+        if (forecastWeatherData) {
+            updateForecastWeatherData(forecastWeatherData);
+        }
+    });
+
+    document.getElementById("searchBtn").addEventListener("click", async () => {
+        if (Weather === 'Rain') {
+        document.body.style.backgroundImage = "url('https://sukhbinder.files.wordpress.com/2012/10/wpid-rain.jpg')";
+        }
+});
