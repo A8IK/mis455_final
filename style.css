@@ -24,3 +24,17 @@ body {
     color: #a7ff04;
   }
   
+  .left-panel {
+    position: relative;
+    background-image: url('whether.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+  
+  .left-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+  }
