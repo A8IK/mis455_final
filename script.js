@@ -32,3 +32,40 @@ document.addEventListener("DOMContentLoaded", () => {
         `;
         additionalWeatherDataContainer.innerHTML = additionalWeatherHTML;
     }
+
+    function updateForecastWeatherData(data) {
+        const { city, list } = data;
+        currentLocationDisplay.innerText = `${city.name}, ${city.country}`;
+    
+        let forecastHTML = `
+            <div class="five-day-forecast-heading">
+                ${city.name} - 5 Day Weather Forecast
+            </div>
+            <div class="five-day-forecast-grid">
+        `;
+    
+        const today = new Date();
+        today.setHours(0, 0, 0, 0); 
+    
+        list.slice(0, 5).forEach((forecast, index) => {
+            const date = new Date(forecast.dt_txt);
+            date.setHours(0, 0, 0, 0);
+    
+            if (date >= today) {
+                const forecastDate = new Date(date);
+                forecastDate.setDate(date.getDate() + index);
+    
+                forecastHTML += `
+                    <div class="weather-block">
+                        <p>Date: ${forecastDate.toDateString()}</p>
+                        <p>Temperature: ${forecast.main.temp}°C</p>
+                        <p>Weather: ${forecast.weather[0].description}</p>
+                        <!-- Add more relevant information here -->
+                    </div>
+                `;
+            }
+
+            if ((index + 1) % 3 === 0) {
+                forecastHTML += `</div><div class="five-day-forecast-grid">`;
+            }
+        });
