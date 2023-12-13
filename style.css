@@ -1,0 +1,26 @@
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    color: #ffffff; 
+    background-color: #e48787;
+  }
+  
+  .container {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    background-color: #ffffff;
+  }
+  
+  .left-panel,
+  .right-panel {
+    flex: 1; 
+    box-sizing: border-box;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    color: #a7ff04;
+  }
+  
