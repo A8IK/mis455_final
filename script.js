@@ -127,16 +127,16 @@ document.addEventListener("DOMContentLoaded", () => {
     });
 
     document.getElementById("searchBtn").addEventListener("click", async () => {
-        if (Weather === 'rain') {
+        if (weatherDescription === 'rain') {
         document.body.style.backgroundImage = "url('https://sukhbinder.files.wordpress.com/2012/10/wpid-rain.jpg')";
         }
-        else if (Weather === 'clouds') {
+        else if (weatherDescription === 'clouds') {
             document.body.style.backgroundImage = "url('https://tenor.com/view/clouds-sky-sun-aesthetic-gif-17342806')";
         } 
-        else if (Weather === 'clear') {
+        else if (weatherDescription === 'clear') {
             document.body.style.backgroundImage = "url('https://i...')";
         }
-        else if (Weather === 'haze') {
+        else if (weatherDescription === 'haze') {
               document.body.style.backgroundImage = "url('https://live.staticflickr.com/7192/6814624698_2a45c14996_n.jpg')";
         } 
         else {
