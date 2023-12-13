@@ -131,7 +131,7 @@ document.addEventListener("DOMContentLoaded", () => {
         document.body.style.backgroundImage = "url('https://sukhbinder.files.wordpress.com/2012/10/wpid-rain.jpg')";
         }
         else if (Weather === 'clouds') {
-            document.body.style.backgroundImage = "url(cloud.gif)";
+            document.body.style.backgroundImage = "url('https://tenor.com/view/clouds-sky-sun-aesthetic-gif-17342806')";
         } 
         else if (Weather === 'clear') {
             document.body.style.backgroundImage = "url('https://i...')";
