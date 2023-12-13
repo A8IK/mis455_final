@@ -86,7 +86,7 @@ body {
   }
 
   .right-panel {
-    /* background-color: #010505; */
+    background-color: #19436d;
     overflow: hidden; 
     display: flex;
     flex-direction: column;

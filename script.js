@@ -127,7 +127,20 @@ document.addEventListener("DOMContentLoaded", () => {
     });
 
     document.getElementById("searchBtn").addEventListener("click", async () => {
-        if (Weather === 'Rain') {
+        if (Weather === 'rain') {
         document.body.style.backgroundImage = "url('https://sukhbinder.files.wordpress.com/2012/10/wpid-rain.jpg')";
         }
+        else if (Weather === 'clouds') {
+            document.body.style.backgroundImage = "url(cloud.gif)";
+        } 
+        else if (Weather === 'clear') {
+            document.body.style.backgroundImage = "url('https://i...')";
+        }
+        else if (Weather === 'haze') {
+              document.body.style.backgroundImage = "url('https://live.staticflickr.com/7192/6814624698_2a45c14996_n.jpg')";
+        } 
+        else {
+            document.body.style.backgroundImage= "url(whether.jpg)";
+        }
+    });
 });
